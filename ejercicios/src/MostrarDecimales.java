@@ -1,4 +1,4 @@
-public class Main {
+public class MostrarDecimales {
     public static void main(String[] args) {
         System.out.println(1.01f);
         System.out.println(2.02f);

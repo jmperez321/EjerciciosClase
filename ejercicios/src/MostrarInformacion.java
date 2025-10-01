@@ -1,4 +1,4 @@
-public class Main {
+public class MostrarInformacion {
     public static void main(String[] args) {
         System.out.println("Estimat alumne,");
         System.out.println("Programar és com anar en bicicleta, cal intentar-ho 1 cop, 2 cops, 3 cops...");
