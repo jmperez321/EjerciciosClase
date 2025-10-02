@@ -17,5 +17,6 @@ public class rellotgedemanil {
         System.out.println(gh);
         System.out.println(gm);
         System.out.println(gs);
+
     }
 }
