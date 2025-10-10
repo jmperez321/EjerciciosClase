@@ -17,7 +17,11 @@ public class spaceinvade {
         int W2 = sc.nextInt();
         int H2 = sc.nextInt();
 
-        boolean pum = !((X1 + W1 <= X2) || (X2 + W2 <= X1) || (Y1 + H1 <= Y2) || (Y2 + H2 <= Y1));
-        System.out.println(pum);
+        boolean pum1 = (X1 + W1 <= X2);
+        boolean pum2 = (X2 + W2 <= X1);
+        boolean pum3 = (Y1 + H1 <= Y2);
+        boolean pum4 = (Y2 + H2 <= Y1);
+        boolean pum = (pum1 || pum2 || pum3 || pum4);
+        System.out.println(!pum);
     }
 }
