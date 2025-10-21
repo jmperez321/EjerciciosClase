@@ -8,10 +8,9 @@ public class PrimerFloatPar {
         Scanner sc = new Scanner(System.in);
         sc.useLocale(Locale.ENGLISH);
 
-        float A = sc.nextFloat();
-        A*=10;
+        float A = sc.nextFloat()*10;
 
         int numInt = (int)A;
-        System.out.println(numInt % 10 ==0);
+        System.out.println(numInt % 2 ==0);
     }
 }
