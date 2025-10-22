@@ -1,4 +1,4 @@
-package ComparadorsLogics;
+package ComparadorLogics;
 
 import java.util.Locale;
 import java.util.Scanner;

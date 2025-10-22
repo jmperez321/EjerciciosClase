@@ -1,4 +1,4 @@
-package ConversTipusCadenasText;
+package ConverTipusCadenasText;
 
 import java.util.Locale;
 import java.util.Scanner;

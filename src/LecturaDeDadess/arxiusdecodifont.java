@@ -1,4 +1,4 @@
-package LecturaDeDades;
+package LecturaDeDadess;
 
 import java.util.Scanner;
 

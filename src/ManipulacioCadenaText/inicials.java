@@ -1,4 +1,4 @@
-package ManipulacioCadenasText;
+package ManipulacioCadenaText;
 
 import java.util.Locale;
 import java.util.Scanner;
