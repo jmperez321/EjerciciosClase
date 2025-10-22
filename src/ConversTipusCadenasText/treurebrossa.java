@@ -15,6 +15,9 @@ public class treurebrossa{
         int P2L = P2.length()-2;
         String P2a = P2.substring(0,P2L);
 
-        System.out.println();
-    }
+        int PP1 = Integer.parseInt(P1a);
+        int PP2 = Integer.parseInt(P2a);
+
+        System.out.println(PP1+PP2);
+        }
 }
