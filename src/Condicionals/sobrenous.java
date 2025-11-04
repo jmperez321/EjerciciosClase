@@ -9,17 +9,18 @@ public class sobrenous {
         sc.useLocale(Locale.ENGLISH);
 
         int N = sc.nextInt();
-        int Ow = N/24;
-        int Os = N%24;
-        int F = 24-Os;
-
-        if (Os > 0) {
-            Ow + 1;
+        int Ow;
+        if (N%24==0) {
+            Ow =N/24;
+        } else {
+            Ow = (N/24)+1;
         }
-        else{
-            Ow+0;
+        int F;
+        if (N%24 == 0){
+            F=0;
+        } else {
+            F=24-(N%24);
         }
-
 
         System.out.println(Ow + "  " + F);
 
