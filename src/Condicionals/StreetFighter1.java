@@ -10,7 +10,7 @@ public class StreetFighter1 {
 
         String ESTAT = sc.next();
         String EVENT = sc.nextLine();
-        // PROBAREMOS AQUI EL ELSE para todos los que no cambiar e impriman el estado actual.
+        EVENT= EVENT.trim( );
         if (ESTAT.equals("IDLE")) {
             if (EVENT.equals("JOYSTICK_UP")) {
                 System.out.println("JUMPING");
@@ -23,8 +23,7 @@ public class StreetFighter1 {
             } else {
                 System.out.println("IDLE");
             }
-        }
-        if (ESTAT.equals("WALKING")) {
+        } else if (ESTAT.equals("WALKING")) {
             if (EVENT.equals("JOYSTICK_UP")) {
                 System.out.println("JUMPING");
             } else if (EVENT.equals("PUNCH_KEY")) {
@@ -36,32 +35,32 @@ public class StreetFighter1 {
             } else {
                 System.out.println(ESTAT);
             }
-        }
-
-        // Lo siguiente me gustaria probar si puedo poner todos los equals en uno uniendolos con un OR
-
-
-
-
-
-        /*if (ESTAT.equals("IDLE")) {
-            if (EVENT.equals("JOYSTICK_UP")) {
-                System.out.println("JUMPING");
-            } else if (EVENT.equals("JOYSTICK_LEFT/RIGHT")) {
-                System.out.println("WALKING");
+        } else if (ESTAT.equals("KICKING")) {
+            if (EVENT.equals("KICK_KEY")) {
+                System.out.println("KICKING");
+            } else if (EVENT.equals("KICK_END")) {
+                System.out.println("IDLE");
+            } else {
+                System.out.println(ESTAT);
+            }
+        } else if (ESTAT.equals("PUNCHING")) {
+            if (EVENT.equals("PUNCH_KEY")) {
+                System.out.println("PUNCHING");
+            } else if (EVENT.equals("PUNCH_END")) {
+                System.out.println("IDLE");
+            } else {
+                System.out.println(ESTAT);
+            }
+        } else if (ESTAT.equals("JUMPING")) {
+            if (EVENT.equals("TOUCH_FLOOR")) {
+                System.out.println("IDLE");
             } else if (EVENT.equals("PUNCH_KEY")) {
                 System.out.println("PUNCHING");
             } else if (EVENT.equals("KICK_KEY")) {
                 System.out.println("KICKING");
-            } else if (EVENT.equals("PUNCH_END")) {
-                System.out.println(ESTAT);
-            } else if (EVENT.equals("KICK_END")) {
-                System.out.println(ESTAT);
-            } else if (EVENT.equals("TOUCH_FLOOR")) {
-                System.out.println(ESTAT);
-            } else if (EVENT.equals("JOYSTICK_CENTER")) {
+            } else {
                 System.out.println(ESTAT);
             }
-        }*/
+        }
     }
 }
