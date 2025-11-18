@@ -8,26 +8,62 @@ public class MaquinaDev {
         Scanner sc = new Scanner(System.in);
         sc.useLocale(Locale.ENGLISH);
 
-        String Status = "";
+
         int Stock = sc.nextInt();
-        float PreuAmp = sc.nextFloat();
+        float Price = sc.nextFloat();
         float Balance = 0;
         sc.nextLine();
-        String Ope = sc.nextLine();
-
+        String Status= sc.next();
+        System.out.println("Insert coin");
         while (!Status.equals("OFF")){
-            String Ope = sc.nextLine();
-            if (Balance==0) {
-                System.out.println("Balance:"+Balance);
-            } else {
-                System.out.println("Insert coin");
+            if (Status.equals("INSERT")){
+                float Money = sc.nextFloat();
+                Balance= Balance + Money;
+                sc.nextLine();
+                if (Balance==0) {
+                    System.out.println("Insert coin");
+                }else{
+                    System.out.println("Balance:"+Balance);
+                }
             }
-
-
-
+            if (Status.equals("EXPEND")){
+                if (Stock>0){
+                    if (Balance>=Price){
+                        Stock--;
+                        Balance-=Price;
+                        System.out.println("Your water, thanks");
+                        if (Balance==0) {
+                            System.out.println("Insert coin");
+                        }else{
+                            System.out.println("Balance:"+Balance);
+                        }
+                    } else {
+                        System.out.println("Price:"+Price);
+                        if (Balance==0) {
+                            System.out.println("Insert coin");
+                        }else{
+                            System.out.println("Balance:"+Balance);
+                        }
+                    }
+                } else {
+                    System.out.println("Product unavailable");
+                    if (Balance==0) {
+                        System.out.println("Insert coin");
+                    }else{
+                        System.out.println("Balance:"+Balance);
+                    }
+                }
+            }
+            if (Status.equals("REFUND")){
+                System.out.println("Refund:"+Balance);
+                Balance=0;
+                if (Balance == 0) {
+                    System.out.println("Insert coin");
+                }else {
+                    System.out.println("Balance:"+Balance);
+                }
+            }
+            Status = sc.next();
         }
-
-
-
     }
 }
