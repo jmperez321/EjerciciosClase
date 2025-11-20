@@ -10,13 +10,23 @@ public class DivIMult {
 
         float Num1 = sc.nextFloat();
         float Num2 = sc.nextFloat();
-        float Subtotal=Num1;
 
-        for (float A=Num1;A==Num2;A++){
-            if (Num2)
+        float ContA= Num1;
+        float Cosa=Num1;
 
+        while (ContA<=Num2) {
+            Cosa++;
+            System.out.print(Num1+" ");
+            if (Cosa!=0) {
+                if (Cosa % 2 == 0) {
+                    Num1 = Num1/Cosa;
+                } else if (Cosa%2!=0){
+                    Num1 = Num1*Cosa;
+                }
+            }
+            ContA++;
         }
-        System.out.println(Factor);
+
     }
 }
 
