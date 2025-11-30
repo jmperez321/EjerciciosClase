@@ -10,14 +10,6 @@ public class SucesioneDeFibon2 {
 
         int NumDeSeries = sc.nextInt();
 
-        do {
-            if (NumDeSeries == 0) {
-                break;
-            }
-            
-            }
-        }while
 
-        }
     }
 }
