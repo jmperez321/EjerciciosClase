@@ -9,19 +9,28 @@ public class Apuntes {
         sc.useLocale(Locale.ENGLISH);
 
         int N = sc.nextInt();
-        String [] Frase = new String[N];
-        for (int i =0; i<N; i++){
+
+        int Pag[] = new int[N];
+        String Frase[] = new String[N];
+
+        for (int i = 0; i < N; i++) {
+            Pag[i] = sc.nextInt();
             Frase[i] = sc.nextLine();
         }
-        String [] Apuntes = new String[N];
-        for (int j =0; j<N;j++) {
-            int Cont = 0;
-            int Pag = Integer.parseInt(Frase[Cont].substring(0, 1));
-            Cont++;
-            Apuntes[Pag]=Frase[j];
+
+        int PagOrdenada[] = new int[N];
+        String FraseOrdenada[] = new String[N];
+
+        for (int j = 0; j < N; j++) {
+            int a = Pag[j];
+            PagOrdenada[a - 1] = Pag[j];
+            FraseOrdenada[a - 1] = Frase[j];
         }
-        for (int z = 0; z<N;z++){
-            System.out.println(Apuntes[z]);
+
+        for (int z = 0; z < N; z++) {
+            System.out.print(PagOrdenada[z] + " ");
+            System.out.println(FraseOrdenada[z]);
         }
+
     }
 }
