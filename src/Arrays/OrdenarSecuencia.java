@@ -13,17 +13,18 @@ public class OrdenarSecuencia {
         for (int i = 0; i < N; i++) {
             NumSeq[i] = sc.nextInt();
         }
-        int NumMin =NumSeq[0];
 
-        for (int j = 1; j<N; j++) {
-            if (NumSeq[j] < NumMin) {
-                NumMin = NumSeq[j];
+        for (int i = 1; i<N; i++) {
+            for (int j=0; j< (N-1); j++){
+                if (NumSeq[j] > NumSeq[j+1]) {
+                    int NumProv = NumSeq[j];
+                    NumSeq[j] = NumSeq[j + 1];
+                    NumSeq[j + 1] = NumProv;
+                }
             }
         }
-        System.out.print(NumMin);
         for (int z=0;z<N;z++){
-
+            System.out.print(NumSeq[z] + " ");
         }
-        // probar a hacer el bucle doble del trobarsumands para comparar los numeros y ordenarlos.
     }
 }
