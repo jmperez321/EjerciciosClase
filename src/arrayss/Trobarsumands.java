@@ -1,4 +1,4 @@
-package Arrays;
+package arrayss;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -17,7 +17,7 @@ public class Trobarsumands {
 
         for (int j = 0; j < N; j++) {
             for (int z = 0; z < N; z++) {
-                if (NumSeq[j] == NumSeq[z]){
+                if (NumSeq[j] == NumSeq[z]) {
                     continue;
                 }
                 if ((NumSeq[j] + NumSeq[z]) == ResSuma) {

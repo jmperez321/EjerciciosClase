@@ -1,4 +1,4 @@
-package Arrays;
+package arrayss;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -9,12 +9,12 @@ public class Elultimoquesume {
         sc.useLocale(Locale.ENGLISH);
 
         int N = sc.nextInt();
-        int [] Num = new int[N];
-        for (int i =0; i<N; i++){
-             Num[i] = sc.nextInt();
+        int[] Num = new int[N];
+        for (int i = 0; i < N; i++) {
+            Num[i] = sc.nextInt();
         }
-        for (int j = 0; j<N; j++) {
-            System.out.print(Num[j] + Num[N-1] + " ");
+        for (int j = 0; j < N; j++) {
+            System.out.print(Num[j] + Num[N - 1] + " ");
         }
     }
 }

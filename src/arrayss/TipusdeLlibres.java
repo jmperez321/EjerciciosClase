@@ -1,4 +1,4 @@
-package Arrays;
+package arrayss;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -21,15 +21,15 @@ public class TipusdeLlibres {
         }
 
         int NumPeque = Comprats[0];
-        for (int z = 0; z<N; z++){
+        for (int z = 0; z < N; z++) {
             if (Comprats[z] < NumPeque) {
-                NumPeque=Comprats[z];
+                NumPeque = Comprats[z];
             }
         }
         System.out.println("el llistat de llibres que menys tenim són:");
-        for (int P=0; P < N; P++){
-            if (Comprats[P]==NumPeque){
-                System.out.print(TLlibre[P]+ " ");
+        for (int P = 0; P < N; P++) {
+            if (Comprats[P] == NumPeque) {
+                System.out.print(TLlibre[P] + " ");
                 System.out.println(Comprats[P]);
             }
         }
