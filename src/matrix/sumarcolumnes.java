@@ -3,7 +3,8 @@ package matrix;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class verticalsiguals {
+
+public class sumarcolumnes {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         sc.useLocale(Locale.ENGLISH);
@@ -18,21 +19,12 @@ public class verticalsiguals {
         }
 
         for (int j = 0; j < numColumn; j++) {
-            boolean iguals = true;
             int numComp = matriz[0][j];
             for (int i = 1; i < numFiles; i++) {
-                if (numComp != matriz[i][j]) {
-                    iguals = false;
-                    break;
-                }
+                numComp += matriz[i][j];
             }
-
-            if (iguals) {
-                System.out.println("La columna " + j + " té tots els números iguals.");
-                return;
-            }
+            System.out.print(numComp + " ");
         }
 
-        System.out.println("No hi ha cap columna amb els números iguals.");
     }
 }
