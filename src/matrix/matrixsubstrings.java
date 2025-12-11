@@ -4,7 +4,7 @@ package matrix;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class Matrixlowerupper {
+public class matrixsubstrings {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         sc.useLocale(Locale.ENGLISH);
