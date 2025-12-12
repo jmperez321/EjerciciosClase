@@ -21,28 +21,30 @@ public class samusdispara {
         int samusVer = numColumn - 1;
         String direccioTret = sc.next();
         if (direccioTret.equals("↑")) {
-            for (int i = 0; i < samusVer; i++) {
+            for (int i = samusVer; i > -1; i--) {
                 String deteccio = matriz[i][samusHor];
                 if (deteccio.equals("#")) {
                     System.out.println("La Samus ha disparat en línia recta cap amunt i ha impactat amb un obstacle.");
+                    return;
                 } else if (deteccio.equals("&")) {
                     System.out.println("La Samus ha disparat en línia recta cap amunt i ha impactat amb un enemic.");
-                } else if (!deteccio.equals("#") && !deteccio.equals("&")) {
-                    System.out.println("La Samus ha disparat en línia recta cap amunt i no ha impactat amb res.");
+                    return;
                 }
             }
-        }
-        if (direccioTret.equals("→")) {
+            System.out.println("La Samus ha disparat en línia recta cap amunt i no ha impactat amb res.");
+        } else if (direccioTret.equals("→")) {
             for (int i = 0; i < numFiles; i++) {
                 String deteccio = matriz[samusVer][i];
                 if (deteccio.equals("#")) {
                     System.out.println("La Samus ha disparat en línia recta cap a la dreta i ha impactat amb un obstacle.");
+                    return;
                 } else if (deteccio.equals("&")) {
                     System.out.println("La Samus ha disparat en línia recta cap a la dreta i ha impactat amb un enemic.");
-                } else {
-                    System.out.println("La Samus ha disparat en línia recta cap a la dreta i no ha impactat amb res.");
+                    return;
                 }
+
             }
+            System.out.println("La Samus ha disparat en línia recta cap a la dreta i no ha impactat amb res.");
         }
     }
 }
