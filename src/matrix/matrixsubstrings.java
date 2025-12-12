@@ -1,5 +1,4 @@
 package matrix;
-// NO ESTA TARMINADO
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -21,15 +20,14 @@ public class matrixsubstrings {
 
         for (int i = 0; i < numColumn; i++) {
             for (int j = 0; j < numColumn; j++) {
-                String sololetras = matriz[i][j].substring(numInicio, numFinal);
-                if ((matriz[i][j].length() - 1) < numFinal && (matriz[i][j].length() - 1) > numInicio) {
+                if (matriz[i][j].length() - 1 < numFinal) {
                     System.out.print("<ERROR>" + " ");
                 } else {
-                    System.out.print(sololetras + " ");
+                    String soloLetras = matriz[i][j].substring(numInicio, numFinal);
+                    System.out.print(soloLetras + " ");
                 }
             }
             System.out.println();
         }
-
     }
 }
