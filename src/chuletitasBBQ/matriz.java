@@ -10,11 +10,11 @@ public class matriz {
 
         // Bucle para recoger imput de una matriz
 
-        int numColumn = sc.nextInt();
-        int numFiles = sc.nextInt();
-        int[][] matriz = new int[numColumn][numFiles];
-        for (int i = 0; i < numColumn; i++) {
-            for (int j = 0; j < numFiles; j++) {
+        int files = sc.nextInt();
+        int column = sc.nextInt();
+        int[][] matriz = new int[files][column];
+        for (int i = 0; i < files; i++) {
+            for (int j = 0; j < column; j++) {
                 matriz[i][j] = sc.nextInt();
             }
         }
