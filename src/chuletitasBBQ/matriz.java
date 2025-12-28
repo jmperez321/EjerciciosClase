@@ -18,6 +18,13 @@ public class matriz {
                 matriz[i][j] = sc.nextInt();
             }
         }
+        // Listar los datos de la matriz
+        for (int i = 0; i < files; i++) {
+            for (int j = 0; j < column; j++) {
+                System.out.print(matriz[i][j] + " ");
+            }
+            System.out.println();
+        }
 
     }
 }
