@@ -19,7 +19,7 @@ public class eliminarLineaTetris {
 
             }
         }
-        for (int i = 0; i < columnes; i++) {
+        for (int i = 0; i < files; i++) {
             boolean elimin = true;
 
             for (int j = 0; j < columnes; j++) {
@@ -36,15 +36,5 @@ public class eliminarLineaTetris {
             }
 
         }
-
-      /*  for (int i = 0; i < files; i++) {
-            boolean salto = true;
-            for (int j = 0; j < columnes; j++) {
-               if (casella[i][0]==casella[i][j]){
-
-               }
-            }
-        }*/
-
     }
 }
