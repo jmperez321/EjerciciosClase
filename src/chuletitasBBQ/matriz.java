@@ -18,6 +18,16 @@ public class matriz {
                 matriz[i][j] = sc.nextInt();
             }
         }
+        //Matriz: Recoger caracter por caracter de un String
+        String[][] casella = new String[3][3];
+        for (int i = 0; i < 3; i++) {
+            String fila = sc.next();
+            for (int j = 0; j < 3; j++) {
+                casella[i][j] = String.valueOf(fila.charAt(j));
+            }
+        }
+
+
         // Listar los datos de la matriz
         for (int i = 0; i < files; i++) {
             for (int j = 0; j < column; j++) {
