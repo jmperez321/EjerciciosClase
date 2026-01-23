@@ -1,4 +1,4 @@
-package SentenciesDeRamificacio;
+package sentenciesDeRamificacio;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -18,7 +18,7 @@ public class GeneradorDeCorrent {
             }
             Num1 = Num2;
             Num2 = sc.nextInt();
-            if (Num2==0){
+            if (Num2 == 0) {
                 System.out.println("CORRECTE");
                 break;
             }
@@ -28,7 +28,7 @@ public class GeneradorDeCorrent {
             }
             Num1 = Num2;
             Num2 = sc.nextInt();
-            if (Num2==0){
+            if (Num2 == 0) {
                 System.out.println("CORRECTE");
                 break;
             }

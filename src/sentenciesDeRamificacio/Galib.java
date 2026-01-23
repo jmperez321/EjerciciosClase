@@ -1,4 +1,4 @@
-package SentenciesDeRamificacio;
+package sentenciesDeRamificacio;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -11,10 +11,10 @@ public class Galib {
         float Htruck = sc.nextFloat();
         int NPonts = sc.nextInt();
 
-        for (int A=0; A<NPonts; A++){
+        for (int A = 0; A < NPonts; A++) {
             float HPonts = sc.nextFloat();
-            if (Htruck>HPonts) {
-                System.out.println("xoca amb el pont " + (A+1));
+            if (Htruck > HPonts) {
+                System.out.println("xoca amb el pont " + (A + 1));
                 break;
             }
         }

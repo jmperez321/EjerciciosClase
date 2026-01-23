@@ -1,4 +1,4 @@
-package SentenciesDeRamificacio;
+package sentenciesDeRamificacio;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -11,7 +11,7 @@ public class HotizontalsIguals {
         int filas = sc.nextInt();
         int colum = sc.nextInt();
         int FilaEncontrada = -1;
-        for(int i=0; i<filas;i++) {
+        for (int i = 0; i < filas; i++) {
             int primero = sc.nextInt();
             boolean todosiguales = true;
             for (int j = 1; j < colum; j++) {
@@ -24,8 +24,8 @@ public class HotizontalsIguals {
                 FilaEncontrada = i;
             }
         }
-        if (FilaEncontrada!=-1){
-            System.out.println("La fila "+ FilaEncontrada+ " té tots els números iguals.");
+        if (FilaEncontrada != -1) {
+            System.out.println("La fila " + FilaEncontrada + " té tots els números iguals.");
         } else {
             System.out.println("No hi ha cap fila amb els números iguals.");
         }

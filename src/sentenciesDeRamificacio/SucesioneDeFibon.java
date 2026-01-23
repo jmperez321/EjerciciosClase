@@ -1,4 +1,4 @@
-package SentenciesDeRamificacio;
+package sentenciesDeRamificacio;
 
 import java.util.Locale;
 import java.util.Scanner;
