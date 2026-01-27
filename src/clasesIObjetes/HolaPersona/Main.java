@@ -1,3 +1,4 @@
+/*
 package clasesIObjetes.HolaPersona;
 
 import java.util.Locale;
@@ -25,3 +26,4 @@ public class Main {
         unaAltraPersona.saludar(nom);
     }
 }
+*/
