@@ -1,4 +1,3 @@
-/*
 package clasesIObjetes.HolaPersona;
 
 import java.util.Locale;
@@ -6,9 +5,10 @@ import java.util.Scanner;
 
 
 class Persona {
-    public void
-    public void saludar(String nom) {
-        String nombre=nom;
+    String nom;
+
+    public void saludar() {
+        System.out.println("Hola, em dic " + nom);
     }
 }
 
@@ -19,11 +19,10 @@ public class Main {
 
         Persona unaPersona = new Persona();
         unaPersona.nom = scanner.next();
-        unaPersona.saludar(nom);
+        unaPersona.saludar();
 
         Persona unaAltraPersona = new Persona();
         unaAltraPersona.nom = scanner.next();
-        unaAltraPersona.saludar(nom);
+        unaAltraPersona.saludar();
     }
 }
-*/
