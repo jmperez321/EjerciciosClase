@@ -14,15 +14,15 @@ class Persona {
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        scanner.useLocale(Locale.ENGLISH);
+        Scanner sc = new Scanner(System.in);
+        sc.useLocale(Locale.ENGLISH);
 
         Persona unaPersona = new Persona();
-        unaPersona.nom = scanner.next();
+        unaPersona.nom = sc.next();
         unaPersona.saludar();
 
         Persona unaAltraPersona = new Persona();
-        unaAltraPersona.nom = scanner.next();
+        unaAltraPersona.nom = sc.next();
         unaAltraPersona.saludar();
     }
 }
