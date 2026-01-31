@@ -1,0 +1,54 @@
+package constructorsGettersSetters.paperRockScissors;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+
+// escriu el codi aqui
+class Game {
+    Player player1;
+    Player player2;
+
+    Game(Player player1, Player player2) {
+        this.player1 = player1;
+        this.player2 = player2;
+    }
+}
+
+class Player {
+    int points;
+
+    Player(int points) {
+        this.points = points;
+    }
+}
+
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        sc.useLocale(Locale.ENGLISH);
+
+        Game game = new Game(new Player(0), new Player(0));
+
+        int numRondas = sc.nextInt();
+
+        for (int i = 0; i < numRondas; i++) {
+            String ronda = sc.next();
+            if (ronda.equals("@%") || ronda.equals("#@") || ronda.equals("%#")) {
+                game.player1.points++;
+            } else if (ronda.equals("%@") || ronda.equals("@#") || ronda.equals("#%")) {
+                game.player2.points++;
+            }
+        }
+
+        if (game.player1.points > game.player2.points) {
+            System.out.println("PLAYER 1 WINS");
+        } else if (game.player2.points > game.player1.points) {
+            System.out.println("PLAYER 2 WINS");
+        } else {
+            System.out.println("TIE");
+        }
+    }
+}
