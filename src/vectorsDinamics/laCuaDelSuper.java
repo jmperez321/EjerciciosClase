@@ -14,19 +14,28 @@ public class laCuaDelSuper {
 
         List<Character> liada = new ArrayList<>();
         String lecturaCompleta = sc.nextLine();
-        for (int i = 0; i < lecturaCompleta.length(); i++) {
+        lecturaCompleta=lecturaCompleta.replace(" ", "");
+        for (int i = 0; i < lecturaCompleta.length(); i++){
             liada.add(lecturaCompleta.charAt(i));
-            liada.stream().filter(x != " ");
         }
-        /*do {
-            ponts = sc.nextFloat();
-            if (ponts < 0) {
+        int contMin = 0;
+        int contBarras=0;
+        for (int i = 0; i < liada.size(); i++) {
+            if (liada.get(i)=='|'){
+                contMin--;
+                contBarras++;
+
+            } else {
+                contBarras = 0;
+                contMin++;
+                contMin++;
+
+            }
+            if (contBarras==5){
+                System.out.println(i-1);
                 break;
             }
-            liada.add(ponts);
-        } while (ponts > 0);
-        float alturaVehicle = sc.nextFloat();*/
-        System.out.println(liada);
-        
+        }
+
     }
 }
