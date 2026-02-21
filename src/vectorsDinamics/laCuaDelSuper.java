@@ -1,5 +1,5 @@
 package vectorsDinamics;
-
+// INCOMPLETO NO VALIDO
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -14,28 +14,33 @@ public class laCuaDelSuper {
 
         List<Character> liada = new ArrayList<>();
         String lecturaCompleta = sc.nextLine();
-        lecturaCompleta=lecturaCompleta.replace(" ", "");
-        for (int i = 0; i < lecturaCompleta.length(); i++){
+
+        for (int i = 0; i < lecturaCompleta.length(); i++) {
             liada.add(lecturaCompleta.charAt(i));
         }
-        int contMin = 0;
-        int contBarras=0;
+        int cua = 0;
+        int minActual = 0;
+        int tempsAtencio = 0;
+        int ultimMinutEntrada = 0;
         for (int i = 0; i < liada.size(); i++) {
-            if (liada.get(i)=='|'){
-                contMin--;
-                contBarras++;
-
-            } else {
-                contBarras = 0;
-                contMin++;
-                contMin++;
-
-            }
-            if (contBarras==5){
-                System.out.println(i-1);
-                break;
+            char c = liada.get(i);
+            if (Character.isLetter(c)) {
+                cua++;
+                ultimMinutEntrada = minActual;
+            } else if (c == '|') {
+                minActual++;
+                if (tempsAtencio > 0) {
+                    tempsAtencio--;
+                }
+                if (tempsAtencio == 0 && cua > 0) {
+                    cua--;
+                    tempsAtencio = 2;
+                }
+                if (cua == 0 && tempsAtencio == 0 && minActual - ultimMinutEntrada >= 5) {
+                    System.out.println(minActual + 1);
+                    return;
+                }
             }
         }
-
     }
 }
