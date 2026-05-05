@@ -15,9 +15,13 @@ public class MP {
     }
 
     public boolean aprova(){
+        return aprova(this.ufs.size());
+    }
+    public boolean aprova(int min){
+        int aprovades =0;
         for(UF uf: this.ufs){
-            if(!uf.aprova()) return false;
+            if(!uf.aprova()) aprovades++;
         }
-        return true;
+        return aprovades >= min;
     }
 }

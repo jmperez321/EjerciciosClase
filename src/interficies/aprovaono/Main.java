@@ -14,7 +14,6 @@ public class Main {
         mp.afegirUF(new UF3(sc.nextInt(),sc.nextInt(), sc.nextInt()));
 
         System.out.println(mp.aprova());
-
     }
 }
 
