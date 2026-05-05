@@ -1,10 +1,14 @@
 package interficies.aprovaono;
 
-public class UF1 extends UF {
-
+public class UF1 implements UF {
+    private int pt;
+    private int pl;
+    private int ne;
 
     public UF1(int pt, int pl, int ne) {
-        super(pt, pl, ne);
+        this.pt = pt ;
+        this.pl = pl ;
+        this.ne = ne ;
     }
     public boolean aprova(){
         boolean via1 = (this.pl/ (float)this.pt) >= 0.75f && this.ne >=4;
