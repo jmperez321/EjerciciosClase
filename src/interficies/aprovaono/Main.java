@@ -9,9 +9,11 @@ public class Main {
         sc.useLocale(Locale.ENGLISH);
 
         MP mp=new MP();
-        mp.afegirUF(new UF(sc.nextInt(),sc.nextInt(), sc.nextInt()));
-        mp.afegirUF(new UF(sc.nextInt(),sc.nextInt(), sc.nextInt()));
-        mp.afegirUF(new UF(sc.nextInt(),sc.nextInt(), sc.nextInt()));
+        mp.afegirUF(new UF1(sc.nextInt(),sc.nextInt(), sc.nextInt()));
+        mp.afegirUF(new UF2(sc.nextInt(),sc.nextInt(), sc.nextInt()));
+        mp.afegirUF(new UF3(sc.nextInt(),sc.nextInt(), sc.nextInt()));
+
+        System.out.println(mp.aprova());
 
     }
 }

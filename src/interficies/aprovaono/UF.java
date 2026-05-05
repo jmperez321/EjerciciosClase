@@ -1,9 +1,9 @@
 package interficies.aprovaono;
 
 public class UF {
-    private int pt;
-    private int pl;
-    private int ne;
+    protected int pt;
+    protected int pl;
+    protected int ne;
 
     public UF(int pt, int pl, int ne) {
         this.pt = pt;

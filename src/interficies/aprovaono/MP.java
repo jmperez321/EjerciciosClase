@@ -13,4 +13,11 @@ public class MP {
     public void afegirUF(UF uf){
         this.ufs.add(uf);
     }
+
+    public boolean aprova(){
+        for(UF uf: this.ufs){
+            if(!uf.aprova()) return false;
+        }
+        return true;
+    }
 }
