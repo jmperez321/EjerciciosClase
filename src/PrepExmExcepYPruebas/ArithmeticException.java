@@ -8,10 +8,15 @@ public class ArithmeticException {
         Scanner sc = new Scanner(System.in);
         sc.useLocale(Locale.ENGLISH);
         int num = sc.nextInt();
+        System.out.println(devolver(num));
+    }
+
+    static int devolver(int num) {
         try {
-            System.out.println(10 / num);
+            return 10 / num;
         } catch (java.lang.ArithmeticException e) {
             System.out.println("No es pot dividir entre zero!");
+            throw e;
         }
     }
 }
