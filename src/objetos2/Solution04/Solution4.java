@@ -1,10 +1,6 @@
-package objetos2;
+package objetos2.Solution04;
 
-import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
 class FunctionGame2 {
 

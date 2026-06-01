@@ -1,9 +1,5 @@
-package objetos2;
-import java.io.*;
+package objetos2.Solution01;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
 class FunctionGame {
     public int function1(int param) {

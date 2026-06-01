@@ -1,4 +1,4 @@
-package objetos2;
+package objetos2.Solution02;
 class Post {
     String user;
     String content;
