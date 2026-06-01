@@ -17,15 +17,14 @@ public class CalculadoraTest {
 
     @Test
     void testInvalidChar() {
-
         Assertions.assertThrows(InvalidOperandTypeException.class, () ->
                 new Operand('=', 3));
     }
+
     @Test
     void testDiv0() {
         Calculadora c = new Calculadora();
         c.afegir(new Operand('/', 0));
-
 
         Assertions.assertThrows(DividedByZeroException.class, () ->
                 c.calcular());
